@@ -271,7 +271,7 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption = f"💡 **Tʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ :** {title}\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ :** {message.from_user.mention()}".format(
+        caption = f"💡 **Tʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ :** {message.from_user.mention()}".format(
         position, title, duration, message.from_user.mention()
         ),
         reply_markup=keyboard)
@@ -282,7 +282,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption = f"🏷 **Nᴀᴍᴇ :** {title}\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {message.from_user.mention()}".format(
+        caption = f"🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {message.from_user.mention()}".format(
         title, duration, message.from_user.mention()
         ), )
         os.remove("final.png")
