@@ -72,4 +72,4 @@ async def skip(_, message: Message):
                 callsmusic.queues.get(message.chat.id)["file"]
             )
 
-        await message.reply_text(f"⫸ Skipped Your Song...")
+        await message.reply_text("⫸ Skipped Your Song...")
