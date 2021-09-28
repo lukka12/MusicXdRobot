@@ -271,10 +271,10 @@ async def play(_, message: Message):
         position = await queues.put(message.chat.id, file=file_path)
         await message.reply_photo(
         photo="final.png", 
-        caption = f"💡 **Tʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ :** {message.from_user.mention}",
+        caption = f"💡 **Tʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{}`\n\n🏷 **Nᴀᴍᴇ :** {}\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ :** {}".format(
+        position, tittle, duration, message.from_user.mention()
         ),
-        reply_markup=keyboard,
-        )
+        reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
     else:
@@ -282,8 +282,9 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption = f"🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n" \
-                    + f"🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {message.from_user.mention}",
+        caption = f"🏷 **Nᴀᴍᴇ :** {}\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n" \
+                    + f"🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {}".format(
+        title, duration, message.from_user.mention()
         ), )
         os.remove("final.png")
         return await lel.delete()
