@@ -282,8 +282,7 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption = f"🏷 **Nᴀᴍᴇ :** {tittle}\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n" \
-                    + f"🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {message.from_user.mention()}".format(
+        caption = f"🏷 **Nᴀᴍᴇ :** {tittle}\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n💡 **Sᴛᴀᴛᴜs :** `Pʟᴀʏɪɴɢ`\n"🎧 **Rᴇǫᴜᴇsᴛ ʙʏ :** {message.from_user.mention()}".format(
         title, duration, message.from_user.mention()
         ), )
         os.remove("final.png")
