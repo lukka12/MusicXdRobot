@@ -273,7 +273,8 @@ async def play(_, message: Message):
         photo="final.png", 
         caption = f"💡 **Tʀᴀᴄᴋ ᴀᴅᴅᴇᴅ ᴛᴏ ǫᴜᴇᴜᴇ »** `{position}`\n\n🏷 **Nᴀᴍᴇ :** [{title[:50]}]({url})\n⏱ **Dᴜʀᴀᴛɪᴏɴ :** `{duration}`\n🎧 **Rᴇǫᴜᴇsᴛ Bʏ :** {message.from_user.mention}",
         ),
-        reply_markup=keyboard)
+        reply_markup=keyboard,
+        )
         os.remove("final.png")
         return await lel.delete()
     else:
