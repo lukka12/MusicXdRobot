@@ -84,7 +84,7 @@ async def generate_cover(title, thumbnail):
                    & ~filters.via_bot)
 async def play(_, message: Message):
 
-    lel = await message.reply("`⏱ Bᴇᴇᴘ... Bᴏᴘ... Pʀᴏᴄᴇssɪɴɢ`.**")
+    lel = await message.reply("`Beep Bop Processing...`")
     
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
@@ -104,24 +104,26 @@ async def play(_, message: Message):
                     invitelink = await _.export_chat_invite_link(chid)
                 except:
                     await lel.edit(
-                        "`ᴀᴅᴅ ᴍᴇ ᴀs ᴀᴅᴍɪɴ ғɪʀsᴛ`.")
+                        "<b>😾 Add Me Αs Admin Of Your Group First.</b>")
                     return
 
                 try:
                     await USER.join_chat(invitelink)
                     await USER.send_message(
-                        message.chat.id, "`ᴀssɪsᴛᴀɴᴛ ɪs ᴊᴏɪɴᴇᴅ`.")
+                        message.chat.id, "`🧡 Ηelper Assistant Joined Your Group.`")
 
                 except UserAlreadyParticipant:
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>🛑 ғʟᴏᴏᴅ ᴇʀʀᴏʀ 🛑</b> \n\ʜᴇʟʟᴏ, {user.first_name}, ᴀssɪsᴛᴀɴᴛ ᴄᴏᴜʟᴅ'ɴᴛ ᴊᴏɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ. ᴍᴀʏ ʙᴇ ɪᴛs ʙᴀɴɴᴇᴅ ᴏʀ ᴀɴʏ ᴏᴛʜᴇʀ ɪssᴜᴇ")
+                        f"<b>⚠ Flood Wait Error ⚠ \nUser {ASSISTANT_NAME} Could'nt Join Υour Group Due To Ηeavy Request  For Vc Userbot ! Make Sure User Is Not Banned In Group."
+                        "\n\nOr Manually Add {ASSISTANT_NAME} To Υour Group Αnd Try Again.</b>",
+                     )
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>ʜᴇʏ, {user.first_name}, ᴀssɪsᴛᴀɴᴛ ɪs ɴᴏᴛ ʜᴇʀᴇ :( sᴇɴᴅ /play ᴄᴏᴍᴍᴀɴᴅ ғɪʀsᴛ ᴛᴏ ᴀᴅᴅ ᴀssɪsᴛᴀɴᴛ.</i>")
+            f"<i>🙄 Userbot Not In This Chat, Ask Group Admin To Send /play Command For First Time Or Add @GalaXinaVcAssistant Manually.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
