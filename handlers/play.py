@@ -123,7 +123,7 @@ async def play(_, message: Message):
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>🙄 Userbot Not In This Chat, Ask Group Admin To Send /play Command For First Time Or Add @GalaXinaVcAssistant Manually.</i>")
+            f"<i>🙄 Userbot Not In This Chat, Ask Group Admin To Send /play Command For First Time Or Add {ASSISTANT_NAME} Manually.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
