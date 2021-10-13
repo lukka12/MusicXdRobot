@@ -116,14 +116,14 @@ async def play(_, message: Message):
                     pass
                 except Exception:
                     await lel.edit(
-                        f"<b>⚠ Flood Wait Error ⚠ \nUser {ASSISTANT_NAME} Could'nt Join Υour Group Due To Ηeavy Request  For Vc Userbot ! Make Sure User Is Not Banned In Group."
-                        "\n\nOr Manually Add {ASSISTANT_NAME} To Υour Group Αnd Try Again.</b>",
+                        f"<b>⚠ Flood Wait Error ⚠ \nUser @GalaXinaVcAssistant Could'nt Join Υour Group Due To Ηeavy Request  For Vc Userbot ! Make Sure User Is Not Banned In Group."
+                        "\n\nOr Manually Add @GalaXinaVcAssistant To Υour Group Αnd Try Again.</b>",
                      )
     try:
         await USER.get_chat(chid)
     except:
         await lel.edit(
-            f"<i>🙄 Userbot Not In This Chat, Ask Group Admin To Send /play Command For First Time Or Add {ASSISTANT_NAME} Manually.</i>")
+            f"<i>🙄 Userbot Not In This Chat, Ask Group Admin To Send /play Command For First Time Or Add @GalaXinaVcAssistant Manually.</i>")
         return
     
     audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
