@@ -7,7 +7,7 @@ if os.path.exists("local.env"):
 
 load_dotenv()
 que = {}
-SESSION_NAME = getenv("SESSION_NAME", "BQCiI7KGR4Qrosebn857-QvDqQNoIitfoPzKLOTBEnRu8k4OmjcW0LWA2URSKE556A7X0RAMhlLfGNXWVMRaXtWBAZi9KjmMAVv7Qk4ac0uaJW_j7mKfx1QEPkjBLz9aVfYVp78Xd8sdOe9BB40lz9vrk9FCx_EGfEdLgPQAL0952QeQUQk5KVE24QRyoYMd7PmXZvVWfhho1zSjL5l0V8joWejU6OCN9e9jQfUetcK5PBq4GHEw9LYb-3EaO-R6Lblmk1Y1DcMWih71p5COq9HfYsV1q6SLn7jyP7Nenf3ZrtM70phulYJASs8GatpCLjLmBnqg3vQH023ctMDS7LZge27vYQA")
+SESSION_NAME = getenv("SESSION_NAME", "BQB4ha-eQSP_J7-HlVPDGdg7gKu32tPdDwA8LgX-FUHLlq8TZLn-k6cgej5MBLBw_y6eqGmVTZm_rQrGQ5t4qgztUFFqBBVDt9IlMrxbQNY49VnhH2UEK2yYWL0xtD4HP9cbSBrjPitvIFqw_FdkfT3UKb7GRcdNVp8wXn9f-0sIF2BQyHvNFAD7yqnw6fxmcksZ_PokngmQIQSptSG9-XgubgbhVOzAkqX24pBnWQejRcW5qsQ1knkbN1u1GI-k0iZzcIhCxlSwdMKJXvNRjFuTm9YEIeIEzKyoE_D99zfy5DAH99gTv1hPI1CZQPvdE1XuQ91jWk6kyuskoiF_7FnTe27vYQA")
 BOT_TOKEN = getenv("BOT_TOKEN", "2034558488:AAFCVz6rjcXEu1Opzyfny2oSMIuphk2SUlQ")
 BOT_NAME = getenv("BOT_NAME", "𝙂𝙖𝙡𝙖𝙭𝙞𝙣𝙖 ✘ 𝙈𝙪𝙨𝙞𝙘")
 BG_IMAGE = getenv("BG_IMAGE", "https://telegra.ph/file/fb7d30e217de089621c87.png")
