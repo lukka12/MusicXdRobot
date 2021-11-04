@@ -16,3 +16,4 @@ future
 wget
 yt-dlp
 Pillow
+search_engine_parser
